@@ -1,0 +1,148 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "blocky_lys_image_embedded_U9gQQA": {
+      "type": "blocky-lys-image-embed",
+      "blocks": {
+        "title_kxx7Ay": {
+          "type": "title",
+          "settings": {
+            "title": "Introducing...",
+            "title_size": 70,
+            "title_color": "#000000"
+          }
+        },
+        "button_zXCDwy": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://collections/all",
+            "button_border_radius": "extra-round",
+            "button_style": "regular",
+            "button_background_color": "#000000",
+            "button_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "title_kxx7Ay",
+        "button_zXCDwy"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/https_3A_2F_2Fwww.rasluxuryoils.com_2Fcdn_2Fshop_2Ffiles_2Felixir_Desktop_1920x889_62919ef3-c900-4f12-a95d-75c491e96a99.jpg?v=1769185068",
+        "section_height": "650px",
+        "mobile_height": "300px",
+        "image_fit": "cover",
+        "overlay_opacity": 0,
+        "text_align": "vertical-bottom horizontal-left",
+        "full_screen": true,
+        "page_width": 1200,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "blocky_lys_scrolling_text_bar_Xgnxzm": {
+      "type": "blocky-lys-scrolling-text-bar",
+      "blocks": {
+        "text_399cQH": {
+          "type": "text",
+          "settings": {
+            "text": "Showcasing our best seller"
+          }
+        }
+      },
+      "block_order": [
+        "text_399cQH"
+      ],
+      "settings": {
+        "text_size": "1.75",
+        "background_color": "#000000",
+        "text_color": "#ffffff",
+        "speed": 1,
+        "text_spacing": 3,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "featured_product_8BhDwR": {
+      "type": "featured-product",
+      "blocks": {
+        "review_stars_hftQ83": {
+          "type": "review-stars",
+          "settings": {
+            "rating": 5,
+            "star_color": "#ffcc00",
+            "review_text_color": "#000000",
+            "empty_stars_style": "hidden",
+            "review_text": "Based on over <strong>1000+</strong> Reviews",
+            "review_font_size": 16,
+            "review_alignment": "flex-start"
+          }
+        },
+        "title_aJKq6B": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_94hMhQ": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_qYxpCY": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_TyyYp4": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_RRxELV": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        }
+      },
+      "block_order": [
+        "review_stars_hftQ83",
+        "title_aJKq6B",
+        "price_94hMhQ",
+        "variant_picker_qYxpCY",
+        "quantity_selector_TyyYp4",
+        "buy_buttons_RRxELV"
+      ],
+      "settings": {
+        "product": "template",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "blocky_lys_image_embedded_U9gQQA",
+    "blocky_lys_scrolling_text_bar_Xgnxzm",
+    "featured_product_8BhDwR"
+  ]
+}

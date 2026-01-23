@@ -1,0 +1,831 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "review_stars_kXbpid": {
+          "type": "review-stars",
+          "settings": {
+            "rating": 5,
+            "star_color": "#ffcc00",
+            "review_text_color": "#000000",
+            "empty_stars_style": "hidden",
+            "review_text": "Based on over <strong>1000+</strong> Reviews",
+            "review_font_size": 16,
+            "review_alignment": "flex-start"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "shipping_checkpoints_Qb9idz": {
+          "type": "shipping-checkpoints",
+          "disabled": true,
+          "settings": {
+            "icon_1": "shopping_cart",
+            "text_1": "Purchase",
+            "start_date_1": 0,
+            "end_date_1": 0,
+            "icon_2": "local_shipping",
+            "text_2": "Shipped",
+            "start_date_2": 1,
+            "end_date_2": 2,
+            "icon_3": "shopping_bag",
+            "text_3": "Delivered",
+            "start_date_3": 10,
+            "end_date_3": 12,
+            "icon_4": "",
+            "text_4": "",
+            "date_format": "month %e",
+            "day_label": "%a",
+            "month_label": "%b",
+            "date_placement": "col",
+            "icon_color": "#ffffff",
+            "icon_background_color": "#000000",
+            "icon_size": "md",
+            "text_size": 12
+          }
+        },
+        "payment_badges_mrRmGf": {
+          "type": "payment_badges",
+          "settings": {}
+        },
+        "delivery_deadline_M8aRC4": {
+          "type": "delivery_deadline",
+          "settings": {
+            "date_text": "Want it by [DATE]?",
+            "days": 2,
+            "date_format": "day, %e. month",
+            "day_label": "%A",
+            "month_label": "%b",
+            "date_size": 16,
+            "date_color": "#000000",
+            "timer_text": "ORDER WITHIN <strong>[HOURS] HOURS [MINUTES] MINUTES</strong>",
+            "hours": 1,
+            "minutes": 30,
+            "timer_size": 16,
+            "timer_color": "#000000",
+            "text_layout": "col",
+            "text_alignment": "center"
+          }
+        },
+        "icon_with_text_mNdJbt": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical_2",
+            "desktop_icon_size": 40,
+            "desktop_font_size": 16,
+            "mobile_icon_size": 30,
+            "mobile_font_size": 12,
+            "icon_1": "box",
+            "heading_1": "Packed & Secured",
+            "icon_2": "return",
+            "heading_2": "Free & Easy Returns",
+            "icon_3": "truck",
+            "heading_3": "",
+            "icon_4": "check_mark",
+            "heading_4": ""
+          }
+        },
+        "collapsible_tab_pnakVM": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "📝 Product Details",
+            "icon": "none",
+            "content": "<p>Discover our ultra-light facial oil infused with genuine 24K gold micro-flakes that melt into your skin. This luminous elixir delivers a radiant glow while plant-derived oils lock in moisture and nourish deeply.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_9jUktt": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "🚚 Shipping & Delivery",
+            "icon": "none",
+            "content": "<p>We offer free standard shipping on all orders within the continental U.S. Your golden glow arrives within 3–5 business days, with real-time tracking so you know exactly where your package is.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_mXtiYD": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "🔄 Return & Refund Policy",
+            "icon": "none",
+            "content": "<p>Not head-over-heels in love? No worries! You have 30 days from delivery to return your product for a full refund. Just contact our friendly support team, and we’ll handle the rest.</p>",
+            "page": ""
+          }
+        },
+        "product_reviews_dVEExJ": {
+          "type": "product_reviews",
+          "settings": {
+            "show_placeholder_image": true,
+            "reviewer_1": "<em>Emily R. from Los Angeles, CA</em>",
+            "text_1": "<p>I’ve been using this golden gem every morning, and my skin has never looked more luminous! It feels so lightweight and never greasy.</p>",
+            "reviewer_2": "<em>Olivia M. from New York, NY</em>",
+            "text_2": "<p>The 24K gold flakes give a fairy-tale glow that’s perfect under makeup or on its own. My friends keep asking what my secret is!</p>",
+            "reviewer_3": "<em>Sophia L. from Austin, TX</em>",
+            "text_3": "<p>I adore the plant-based oils—my skin stays hydrated all day without feeling heavy. This oil is a game-changer for my routine.</p>",
+            "text_color": "#000000",
+            "text_alignment": "center",
+            "text_size": 18,
+            "display_stars": true,
+            "star_color": "#ffcc00",
+            "star_size": 16,
+            "star_placement": "below",
+            "image_shape": "circle",
+            "image_size": 75,
+            "show_card": true,
+            "background_color": "#ffffff",
+            "auto_scroll": true,
+            "side": "right"
+          }
+        }
+      },
+      "block_order": [
+        "review_stars_kXbpid",
+        "title",
+        "price",
+        "description",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "shipping_checkpoints_Qb9idz",
+        "payment_badges_mrRmGf",
+        "delivery_deadline_M8aRC4",
+        "icon_with_text_mNdJbt",
+        "collapsible_tab_pnakVM",
+        "collapsible_tab_9jUktt",
+        "collapsible_tab_mXtiYD",
+        "product_reviews_dVEExJ"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "small",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "blocky_product_features_and_icons_cbPGtt": {
+      "type": "blocky-product-features-and-icons",
+      "blocks": {
+        "icon_NAwHiM": {
+          "type": "icon",
+          "settings": {
+            "icon_choice": "icon",
+            "icon_code": "celebration",
+            "icon_color": "#000000",
+            "icon_heading": "<h3><b>Instant Radiance</b></h3>",
+            "icon_heading_color": "#000000",
+            "icon_description": "<p>Brightens dull skin with a playful shimmer</p>",
+            "icon_text_color": "#000000"
+          }
+        },
+        "icon_ApGTWq": {
+          "type": "icon",
+          "settings": {
+            "icon_choice": "icon",
+            "icon_code": "opacity",
+            "icon_color": "#000000",
+            "icon_heading": "<h3><b>Deep Hydration</b></h3>",
+            "icon_heading_color": "#000000",
+            "icon_description": "<p>Locks in moisture without greasy residue</p>",
+            "icon_text_color": "#000000"
+          }
+        },
+        "icon_bM4GLR": {
+          "type": "icon",
+          "settings": {
+            "icon_choice": "icon",
+            "icon_code": "spa",
+            "icon_color": "#000000",
+            "icon_heading": "<h3><b>Clean Beauty</b></h3>",
+            "icon_heading_color": "#000000",
+            "icon_description": "<p>Vegan, cruelty-free, and toxin-free formula</p>",
+            "icon_text_color": "#000000"
+          }
+        },
+        "icon_nFVPJ9": {
+          "type": "icon",
+          "settings": {
+            "icon_choice": "icon",
+            "icon_code": "layers",
+            "icon_color": "#000000",
+            "icon_heading": "<h3><b>Versatile Wear</b></h3>",
+            "icon_heading_color": "#000000",
+            "icon_description": "<p>Perfect solo or layered under your favorite serum</p>",
+            "icon_text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "icon_NAwHiM",
+        "icon_ApGTWq",
+        "icon_bM4GLR",
+        "icon_nFVPJ9"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/https_3A_2F_2Fwww.rasluxuryoils.com_2Fcdn_2Fshop_2Ffiles_2Felixir_750x825_617981b8-656e-48b5-bce3-d644a65b1886.jpg?v=1769185068",
+        "video_fit": "zoomed",
+        "media_size": 100,
+        "autoplay": true,
+        "play_button_color": "#FFFFFF",
+        "play_button_background_color": "#000000",
+        "body_text": "<p>Your daily dose of dewy radiance</p>",
+        "body_color": "#000000",
+        "title": "<strong>Liquid Luxe Glow</strong>",
+        "title_size": 60,
+        "title_color": "#000000",
+        "text_layout": "body-first",
+        "icon_position": "top",
+        "background_color": "#FFFFFF",
+        "show_shadow": true,
+        "show_icon_code_shadow": false,
+        "page_width": 1200,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "blocky_floating_image_with_text_hVkz63": {
+      "type": "blocky-floating-image-with-text",
+      "blocks": {
+        "title_mHKJxB": {
+          "type": "title",
+          "settings": {
+            "title": "<b>Goldie’s Glow-Up</b>",
+            "title_size": 60,
+            "title_color": "#FFFFFF"
+          }
+        },
+        "body_bVCVL7": {
+          "type": "body",
+          "settings": {
+            "body_text": "<p>“This oil gave me that red-carpet luminosity any day!” – Goldie</p>",
+            "body_color": "#FFFFFF"
+          }
+        }
+      },
+      "block_order": [
+        "title_mHKJxB",
+        "body_bVCVL7"
+      ],
+      "settings": {
+        "image2": "shopify://shop_images/https_3A_2F_2Fwww.rasluxuryoils.com_2Fcdn_2Fshop_2Ffiles_2F15ml_1_533x_2ca4cf08-45d2-4c72-8d44-d6bea5fbf526.jpg?v=1769185068",
+        "image_size2": 100,
+        "mobile_image_size2": 100,
+        "image_size": 100,
+        "mobile_image_size": 100,
+        "image_size3": 100,
+        "mobile_image_size3": 100,
+        "background_color": "#000000",
+        "bottom_background_color": "#FFFFFF",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "mobile_text_alignment": "center",
+        "is_floating_image": true,
+        "page_width": 1200,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "blocky_blocky_image_with_text_LepEWW": {
+      "type": "blocky-image-with-text",
+      "blocks": {
+        "title_WeGmfK": {
+          "type": "title",
+          "settings": {
+            "title": "<strong>24K Gold-Infused Glow</strong>",
+            "title_size": 60,
+            "title_color": "#000000"
+          }
+        },
+        "body_VhUrpx": {
+          "type": "body",
+          "settings": {
+            "body_text": "<p>Imagine a subtle luminous sheen that catches the light just right, creating a dewy finish that looks like you’ve just stepped off vacation. Each golden particle melts into your skin, blurring fine lines with a soft-focus effect.\n\nThe lightweight formula absorbs instantly, so you can move on with your glow-boosting skincare, makeup, or mask. It’s the perfect pick-me-up for any complexion craving a radiant moment.</p>",
+            "body_size": 16,
+            "body_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "title_WeGmfK",
+        "body_VhUrpx"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Drak_Spots_Blemishes.png?v=1769185066",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "image_fit": "cover",
+        "shadow": true,
+        "layout_style": "1",
+        "background_color": "#ffffff",
+        "layout_2_background_color": "#fcfcfc",
+        "layout": "row",
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_layout": "col",
+        "mobile_content_alignment": "left",
+        "text_container_gap": "2rem",
+        "page_width": 1200,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "blocky_blocky_image_with_text_T6YKgq": {
+      "type": "blocky-image-with-text",
+      "blocks": {
+        "title_7zbjHe": {
+          "type": "title",
+          "settings": {
+            "title": "<strong>Nourishing Plant-Derived Oils</strong>",
+            "title_size": 60,
+            "title_color": "#000000"
+          }
+        },
+        "body_8AzQwU": {
+          "type": "body",
+          "settings": {
+            "body_text": "<p>Our blend of botanical oils, including jojoba, argan, and rosehip, works in harmony to replenish moisture and restore elasticity. Feel the soothing touch of nature as your skin drinks in each nutrient-packed drop.\n\nRich in vitamins and antioxidants, this powerhouse concoction protects against environmental stressors and promotes a healthy skin barrier. Say goodbye to dryness and hello to a nourished, bouncy complexion.</p>",
+            "body_size": 16,
+            "body_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "title_7zbjHe",
+        "body_8AzQwU"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/glotint_desktop_1920x889_c45e06a1-9c8a-4a09-b988-b5dfd4b5ca6e.jpg?v=1769185065",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "image_fit": "cover",
+        "shadow": true,
+        "layout_style": "1",
+        "background_color": "#ffffff",
+        "layout_2_background_color": "#fcfcfc",
+        "layout": "row-reverse",
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_layout": "col",
+        "mobile_content_alignment": "left",
+        "text_container_gap": "2rem",
+        "page_width": 1200,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "blocky_scrolling_image_bar_qgj8VR": {
+      "type": "blocky-scrolling-image-bar",
+      "blocks": {
+        "image_6pJVdb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/farm-to-face-desktop-banner_1920x889_ed537c5d-1f6e-403a-b2b2-f7026b3b1192.jpg?v=1769185065"
+          }
+        },
+        "image_A6D8rA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/https_3A_2F_2Fwww.rasluxuryoils.com_2Fcdn_2Fshop_2Ffiles_2Fglotint_750x825_9b423970-dac5-4eb8-9de9-2a6aa4c1bc49.jpg?v=1769185068"
+          }
+        },
+        "image_bPLkDe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/https_3A_2F_2Fwww.rasluxuryoils.com_2Fcdn_2Fshop_2Ffiles_2FHomepage_-_Desktop_1920x889_619b07ac-c404-4154-b28d-7dae8649de9a.jpg?v=1769185068"
+          }
+        },
+        "image_cbN3HR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/https_3A_2F_2Fcdn.shopify.com_2Fs_2Ffiles_2F1_2F0081_2F9871_2F7493_2Ffiles_2FBrightening_Anti-Pigmentation.jpg?v=1769185068"
+          }
+        }
+      },
+      "block_order": [
+        "image_6pJVdb",
+        "image_A6D8rA",
+        "image_bPLkDe",
+        "image_cbN3HR"
+      ],
+      "settings": {
+        "image_height": 100,
+        "image_shape": "adapt",
+        "image_spacing": 3,
+        "border_radius": 15,
+        "speed": 1,
+        "background_color": "#FFFFFF",
+        "show_shadow": true,
+        "show_blur": true,
+        "disable_carousel": false,
+        "title": "",
+        "title_size": 36,
+        "title_color": "#000000",
+        "body_text": "",
+        "body_size": 20,
+        "body_color": "#000000",
+        "text_background_color": "#FFFFFF",
+        "text_padding": 3,
+        "hide_mobile": false,
+        "desktop_position": "over-text",
+        "mobile_position": "over-text",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "rich_text_CHXVVX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WAReVi": {
+          "type": "heading",
+          "settings": {
+            "heading": "Loved by Radiant Beauties Everywhere",
+            "heading_size": "h1"
+          }
+        },
+        "text_bb44CB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Hear how our golden elixir transformed their skin</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WAReVi",
+        "text_bb44CB"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_WNjhgj": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_fMBbmT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/https_3A_2F_2Fcdn.shopify.com_2Fs_2Ffiles_2F1_2F0081_2F9871_2F7493_2Ffiles_2FDry_Pigmented_Lips.jpg?v=1769185068",
+            "title": "Alyssa G.",
+            "text": "<p>This oil has become my morning ritual—my skin never looked so lit from within!</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_gmLGG4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/https_3A_2F_2Fwww.rasluxuryoils.com_2Fcdn_2Fshop_2Ffiles_2FDesktop_6_1920x889_b835c164-360b-483e-8f80-f2268691b992.jpg?v=1769185068",
+            "title": "Mia P.",
+            "text": "<p>I can’t believe the difference in texture and glow. My skin feels silky and looks airbrushed!</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_AMDUmT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/review_cards_elixir_2_800x800_ff8f8ac9-328f-4fc3-ad96-30074876d074.png?v=1769185066",
+            "title": "Chloe S.",
+            "text": "<p>Finally found a product that hydrates without the slip. Plus, the gold flakes are just magical!</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_fMBbmT",
+        "column_gmLGG4",
+        "column_AMDUmT"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 16
+      }
+    },
+    "blocky_before_after_slider_9rtMUk": {
+      "type": "blocky-before-after-slider",
+      "blocks": {
+        "title_DBGPT7": {
+          "type": "title",
+          "settings": {
+            "title": "<b>Watch the Transformation</b>",
+            "title_size": 60,
+            "title_color": "#000000"
+          }
+        },
+        "body_J66ENt": {
+          "type": "body",
+          "settings": {
+            "body_text": "<p>From tired to luminous in just one week</p>",
+            "body_size": 16,
+            "body_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "title_DBGPT7", 
+        "body_J66ENt"
+      ],
+      "settings": {
+        "before_image": "shopify://shop_images/Acne_Oiliness.png?v=1769185066",
+        "before_image_fit": "cover",
+        "after_image": "shopify://shop_images/https_3A_2F_2Fcdn.shopify.com_2Fs_2Ffiles_2F1_2F0081_2F9871_2F7493_2Ffiles_2FAnti-ageing.jpg?v=1769185068",
+        "after_image_fit": "cover",
+        "slider_size": "medium",
+        "slider_shape": "square",
+        "auto_shape": false,
+        "layout": "slider_first",
+        "before_label": "Before",
+        "after_label": "After",
+        "labels_color": "#000000",
+        "line_color": "#000000",
+        "background_color": "#FFFFFF",
+        "text_align": "center",
+        "page_width": 1200,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "blocky_image_embedded_U4XKcp": {
+      "type": "blocky-image-embedded",
+      "blocks": {
+        "title_gipi7t": {
+          "type": "title",
+          "settings": {
+            "title": "<b>Gold Glam in a Bottle</b>",
+            "title_size": 60,
+            "title_color": "#000000"
+          }
+        },
+        "body_zE3YAb": {
+          "type": "body",
+          "settings": {
+            "body_text": "<p>Elevate your glow, day and night</p>",
+            "body_size": 16,
+            "body_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "title_gipi7t",
+        "body_zE3YAb"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/https_3A_2F_2Fwww.rasluxuryoils.com_2Fcdn_2Fshop_2Ffiles_2Felixir_Desktop_1920x889_62919ef3-c900-4f12-a95d-75c491e96a99.jpg?v=1769185068",
+        "section_height": "550px",
+        "mobile_height": "250px",
+        "image_fit": "cover",
+        "border_radius": 30,
+        "overlay_opacity": 0,
+        "text_align": "vertical-center horizontal-center",
+        "full_screen": false,
+        "page_width": 1200,
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "collapsible_content_wQPqNk": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_EkzKfK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is this oil suitable for all skin types?",
+            "icon": "question_mark",
+            "row_content": "<p>Absolutely! Our lightweight formula is designed to balance hydration for dry, oily, and combination skin. The micro-flakes won’t clog pores or cause breakouts.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_C7FyMx": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How often should I use it?",
+            "icon": "question_mark",
+            "row_content": "<p>You can apply it morning and night after cleansing and toning. A little goes a long way—just 2–3 drops are enough for your entire face.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_pG6fjz": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will the gold flakes leave residue?",
+            "icon": "question_mark",
+            "row_content": "<p>Not at all. The micro-flakes dissolve on contact, leaving behind a soft, luminous finish without any glittery fall-out.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kNzFnD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is your return policy?",
+            "icon": "question_mark",
+            "row_content": "<p>We offer a 30-day hassle-free return if you’re not head-over-heels in love. Reach out to our support team, and they’ll guide you through the process.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_EkzKfK",
+        "collapsible_row_C7FyMx",
+        "collapsible_row_pG6fjz",
+        "collapsible_row_kNzFnD"
+      ],
+      "settings": {
+        "caption": "Everything you need to know about our golden oil",
+        "heading": "Got Questions? We’ve Got Answers!",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "section",
+        "color_scheme": "",
+        "container_color_scheme": "scheme-1",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "blocky_lys_multicolumn_with_text_and_icon_yzXfbh": {
+      "type": "blocky-lys-multicolumn-with-text-and-icon",
+      "blocks": {
+        "column_Mezkx3": {
+          "type": "column",
+          "settings": {
+            "icon_code": "local_shipping",
+            "icon_color": "#000000",
+            "heading": "<h4><strong>Fast Shipping</strong></h4>",
+            "heading_color": "#000000",
+            "heading_font_size": 18,
+            "text": "<p>Quick delivery right to your door</p>",
+            "text_color": "#000000",
+            "text_font_size": 13,
+            "background_color": "#ffffff"
+          }
+        },
+        "column_AX4DXT": {
+          "type": "column",
+          "settings": {
+            "icon_code": "verified_user",
+            "icon_color": "#000000",
+            "heading": "<h4><strong>Secure Checkout</strong></h4>",
+            "heading_color": "#000000",
+            "heading_font_size": 18,
+            "text": "<p>Safe, encrypted payment processing</p>",
+            "text_color": "#000000",
+            "text_font_size": 13,
+            "background_color": "#ffffff"
+          }
+        },
+        "column_t4GF4b": {
+          "type": "column",
+          "settings": {
+            "icon_code": "eco",
+            "icon_color": "#000000",
+            "heading": "<h4><strong>Eco-Friendly</strong></h4>",
+            "heading_color": "#000000",
+            "heading_font_size": 18,
+            "text": "<p>Sustainable packaging you’ll adore</p>",
+            "text_color": "#000000",
+            "text_font_size": 13,
+            "background_color": "#ffffff"
+          }
+        },
+        "column_L3D8Uz": {
+          "type": "column",
+          "settings": {
+            "icon_code": "support_agent",
+            "icon_color": "#000000",
+            "heading": "<h4><strong>24/7 Support</strong></h4>",
+            "heading_color": "#000000",
+            "heading_font_size": 18,
+            "text": "<p>Here to help whenever you need</p>",
+            "text_color": "#000000",
+            "text_font_size": 13,
+            "background_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "column_Mezkx3",
+        "column_AX4DXT",
+        "column_t4GF4b",
+        "column_L3D8Uz"
+      ],
+      "settings": {
+        "columns_desktop": 4,
+        "icon_position": "left",
+        "text_alignment": "left",
+        "icon_size_px": 40,
+        "columns_mobile": 1,
+        "mobile_icon_position": "left",
+        "mobile_text_alignment": "left",
+        "mobile_icon_size_px": 40,
+        "title": "",
+        "title_size": 45,
+        "title_color": "#000000",
+        "title_alignment": "center",
+        "columns_gap": 14,
+        "show_shadow": false,
+        "full_screen": false,
+        "background_color": "#ffffff",
+        "page_width": 1200,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 2,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "main",
+    "blocky_product_features_and_icons_cbPGtt",
+    "blocky_floating_image_with_text_hVkz63",
+    "blocky_blocky_image_with_text_LepEWW",
+    "blocky_blocky_image_with_text_T6YKgq",
+    "blocky_scrolling_image_bar_qgj8VR",
+    "rich_text_CHXVVX",
+    "multicolumn_WNjhgj",
+    "blocky_before_after_slider_9rtMUk",
+    "blocky_image_embedded_U4XKcp",
+    "collapsible_content_wQPqNk",
+    "blocky_lys_multicolumn_with_text_and_icon_yzXfbh",
+    "related-products"
+  ]
+}
