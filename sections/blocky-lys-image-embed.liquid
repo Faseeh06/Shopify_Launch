@@ -3,6 +3,27 @@
   Unauthorized copying, distribution, or reproduction in any form will result in legal action.
 {% endcomment %}
 
+{%- style -%}
+  .blocky-image-hero-img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
+  .blocky-media-hero-container {
+    width: 100% !important;
+    overflow: hidden;
+  }
+
+  .blocky-media-hero-container img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+{%- endstyle -%}
+
 <div 
   class="blocky blocky-padding"
   style="--padding-top: {{ section.settings.padding_top }}; --padding-bottom: {{ section.settings.padding_bottom }}; --overlay_opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }}; --section-page-width: {{ section.settings.page_width | divided_by: 10 }}rem;"

@@ -33,14 +33,13 @@
         }
       },
       "block_order": [
-        "title_kxx7Ay",
         "button_zXCDwy"
       ],
       "settings": {
         "image": "shopify://shop_images/https_3A_2F_2Fwww.rasluxuryoils.com_2Fcdn_2Fshop_2Ffiles_2Felixir_Desktop_1920x889_62919ef3-c900-4f12-a95d-75c491e96a99.jpg?v=1769185068",
         "section_height": "650px",
         "mobile_height": "300px",
-        "image_fit": "cover",
+        "image_fit": "fill",
         "overlay_opacity": 0,
         "text_align": "vertical-bottom horizontal-left",
         "full_screen": true,
