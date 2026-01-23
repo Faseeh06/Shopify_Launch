@@ -1,0 +1,276 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "blocky_lys_image_embedded_U9gQQA": {
+      "type": "blocky-lys-image-embed",
+      "blocks": {
+        "title_kxx7Ay": {
+          "type": "title",
+          "settings": {
+            "title": "Introducing...",
+            "title_size": 70,
+            "title_color": "#000000"
+          }
+        },
+        "button_zXCDwy": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://collections/all",
+            "button_border_radius": "extra-round",
+            "button_style": "regular",
+            "button_background_color": "#000000",
+            "button_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "title_kxx7Ay",
+        "button_zXCDwy"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/https_3A_2F_2Fwww.rasluxuryoils.com_2Fcdn_2Fshop_2Ffiles_2Felixir_Desktop_1920x889_62919ef3-c900-4f12-a95d-75c491e96a99.jpg?v=1769185068",
+        "section_height": "650px",
+        "mobile_height": "300px",
+        "image_fit": "cover",
+        "overlay_opacity": 0,
+        "text_align": "vertical-bottom horizontal-left",
+        "full_screen": true,
+        "page_width": 1200,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "blocky_lys_scrolling_text_bar_Xgnxzm": {
+      "type": "blocky-lys-scrolling-text-bar",
+      "blocks": {
+        "text_399cQH": {
+          "type": "text",
+          "settings": {
+            "text": "Showcasing our best seller"
+          }
+        }
+      },
+      "block_order": [
+        "text_399cQH"
+      ],
+      "settings": {
+        "text_size": "1.75",
+        "background_color": "#000000",
+        "text_color": "#ffffff",
+        "speed": 1,
+        "text_spacing": 3,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "bestsellers": {
+      "type": "bestsellers",
+      "settings": {
+        "heading_prefix": "Our",
+        "heading_suffix": "Bestsellers",
+        "featured_collection": "all",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "view_all_text": "VIEW ALL",
+        "view_all_link": "/pages/latest-offer-by-ras",
+        "color_scheme": "scheme-1",
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "featured_product_1": "24k-gold-radiance-beauty-boosting-face-elixir-limited-edition",
+        "featured_product_2": "lash-ious-lash-brow-growth-serum",
+        "featured_product_3": "super-recharge-bakuchiol-night-cream",
+        "featured_product_4": "lumiere-satin-matte-lipstick-with-botanical-oils"
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "settings": {
+        "max_height": 500,
+        "mobile_max_height": 300,
+        "color_scheme": "scheme-1",
+        "margin_top": 0,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "new_launches": {
+      "type": "new-launches",
+      "settings": {
+        "heading_prefix": "New",
+        "heading_suffix": "Launches",
+        "featured_collection": "all",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "view_all_text": "VIEW ALL",
+        "view_all_link": "/collections/all",
+        "color_scheme": "scheme-1",
+        "margin_top": 0
+      }
+    },
+    "trusted_stories": {
+      "type": "trusted-stories",
+      "blocks": {
+        "video_story_1": {
+          "type": "video_story",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/64a1424479d34014ad56340eca3fb3a1.mp4",
+            "product_title": "Glo-Tint Radiance Skin Perfector",
+            "original_price": 2990,
+            "sale_price": 2240,
+            "product_url": "/products/radiance-glo-tint-serum-skin-perfector",
+            "add_to_cart_url": "/cart/add?id=46656764969186"
+          }
+        },
+        "video_story_2": {
+          "type": "video_story",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/a37577d13ceb45af9cc7e5d480d04aa3.mp4",
+            "product_title": "Super Charge AM & PM Duo Gift Set",
+            "original_price": 5380,
+            "sale_price": 3766,
+            "product_url": "/products/supercharge-skincare-regime",
+            "add_to_cart_url": "/cart/add?id=44200969273570"
+          }
+        },
+        "video_story_3": {
+          "type": "video_story",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/3bd95133200045debdaabed3d28e031d.mp4",
+            "product_title": "24K Gold Radiance Face Elixir",
+            "original_price": 2990,
+            "sale_price": 2240,
+            "product_url": "/products/24k-gold-radiance-beauty-boosting-face-elixir-limited-edition",
+            "add_to_cart_url": "/cart/add?id=37514912694441"
+          }
+        },
+        "video_story_4": {
+          "type": "video_story",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/5b62d51faeb34c2bb4b8b3f175853891.mp4",
+            "product_title": "Lumiere Satin Matte Lipstick",
+            "original_price": 2290,
+            "sale_price": 1718,
+            "product_url": "/products/lumiere-satin-matte-lipstick-with-botanical-oils-pink-cashmere",
+            "add_to_cart_url": "/cart/add?id=44785506353378"
+          }
+        },
+        "video_story_5": {
+          "type": "video_story",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/404970bc65a64de6837b2d4609fa78dc.mp4",
+            "product_title": "Nailchemy Strengthening Nail Serum",
+            "original_price": 1690,
+            "sale_price": 1520,
+            "product_url": "/products/nailchemy-strengthening-nail-serum",
+            "add_to_cart_url": "/cart/add?id=46662676971746"
+          }
+        },
+        "video_story_6": {
+          "type": "video_story",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/fe0304ef2ed040bdb4ae26c432ef7387.mp4",
+            "product_title": "SuperPlump Maximizing Lip Oil Gloss",
+            "original_price": 1490,
+            "sale_price": 1390,
+            "product_url": "/products/super-plump-maximizing-lip-oil-gloss",
+            "add_to_cart_url": "/cart/add?id=46530345435362"
+          }
+        }
+      },
+      "block_order": [
+        "video_story_1",
+        "video_story_2",
+        "video_story_3",
+        "video_story_4",
+        "video_story_5",
+        "video_story_6"
+      ]
+    },
+    "featured_product_8BhDwR": {
+      "type": "featured-product",
+      "blocks": {
+        "review_stars_hftQ83": {
+          "type": "review-stars",
+          "settings": {
+            "rating": 5,
+            "star_color": "#ffcc00",
+            "review_text_color": "#000000",
+            "empty_stars_style": "hidden",
+            "review_text": "Based on over <strong>1000+</strong> Reviews",
+            "review_font_size": 16,
+            "review_alignment": "flex-start"
+          }
+        },
+        "title_aJKq6B": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_94hMhQ": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_qYxpCY": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_TyyYp4": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_RRxELV": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        }
+      },
+      "block_order": [
+        "review_stars_hftQ83",
+        "title_aJKq6B",
+        "price_94hMhQ",
+        "variant_picker_qYxpCY",
+        "quantity_selector_TyyYp4",
+        "buy_buttons_RRxELV"
+      ],
+      "settings": {
+        "product": "template",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "blocky_lys_image_embedded_U9gQQA",
+    "bestsellers",
+    "image_banner",
+    "new_launches",
+    "trusted_stories",
+    "blocky_lys_scrolling_text_bar_Xgnxzm",
+    "featured_product_8BhDwR"
+  ]
+}

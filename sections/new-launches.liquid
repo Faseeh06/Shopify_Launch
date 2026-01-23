@@ -1,0 +1,433 @@
+{% comment %}theme-check-disable UndefinedObject{% endcomment %}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-rating.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'section-featured-product.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .new-launches {
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .new-launches {
+      margin-top: {{ section.settings.margin_top }}px;
+    }
+  }
+
+  .top-head {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .top-head em {
+    font-style: normal;
+    color: #e6b550;
+  }
+
+  .top-head span {
+    color: #000;
+  }
+
+  .customproductgrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .customgrid__item {
+    position: relative;
+    height: 100%;
+  }
+
+  .product-card__wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+
+  .product-card__wrap:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  }
+
+  .product-card__badge__imag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+  }
+
+  .best-img-red {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+
+  .product-card__badges {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+  }
+
+  .product-card__badge {
+    background: #e74c3c;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .product-card__info {
+    padding: 1.5rem;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .product-card__title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .product-card__subtitle {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .product-card__prices {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .product-card__price-text {
+    color: #666;
+    font-size: 0.875rem;
+  }
+
+  .product-card__price {
+    color: #e74c3c;
+    font-weight: 600;
+  }
+
+  .product-card__compareprice {
+    color: #999;
+    text-decoration: line-through;
+  }
+
+  .viewalldiv {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .viewallbutton {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #e6b550;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+
+  .viewallbutton:hover {
+    background: #d4a549;
+    color: white;
+  }
+
+  .custom-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (max-width: 749px) {
+    .customproductgrid {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem;
+    }
+
+    .top-head {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media (min-width: 750px) and (max-width: 1099px) {
+    .customproductgrid {
+      grid-template-columns: repeat(2, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+  }
+{%- endstyle -%}
+
+<section class="new-launches color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="page-width custom-container">
+    <h2 class="top-head">
+      <em>{{ section.settings.heading_prefix }}</em>
+      <span>{{ section.settings.heading_suffix }}</span>
+    </h2>
+
+    <div class="customproductgrid" id="template--{{ section.id }}__{{ section.id }}">
+      {%- assign products_displayed = 0 -%}
+      {%- assign max_products = section.settings.products_to_show | default: 4 -%}
+
+      {%- if section.settings.featured_product_1 != blank -%}
+        {%- assign product1 = all_products[section.settings.featured_product_1] -%}
+        {%- if product1 and product1.id -%}
+          {%- render 'bestseller-product-card', product: product1 -%}
+          {%- assign products_displayed = products_displayed | plus: 1 -%}
+        {%- endif -%}
+      {%- endif -%}
+
+      {%- if section.settings.featured_product_2 != blank and products_displayed < max_products -%}
+        {%- assign product2 = all_products[section.settings.featured_product_2] -%}
+        {%- if product2 and product2.id -%}
+          {%- render 'bestseller-product-card', product: product2 -%}
+          {%- assign products_displayed = products_displayed | plus: 1 -%}
+        {%- endif -%}
+      {%- endif -%}
+
+      {%- if section.settings.featured_product_3 != blank and products_displayed < max_products -%}
+        {%- assign product3 = all_products[section.settings.featured_product_3] -%}
+        {%- if product3 and product3.id -%}
+          {%- render 'bestseller-product-card', product: product3 -%}
+          {%- assign products_displayed = products_displayed | plus: 1 -%}
+        {%- endif -%}
+      {%- endif -%}
+
+      {%- if section.settings.featured_product_4 != blank and products_displayed < max_products -%}
+        {%- assign product4 = all_products[section.settings.featured_product_4] -%}
+        {%- if product4 and product4.id -%}
+          {%- render 'bestseller-product-card', product: product4 -%}
+          {%- assign products_displayed = products_displayed | plus: 1 -%}
+        {%- endif -%}
+      {%- endif -%}
+
+      {%- if products_displayed == 0 -%}
+        {%- for product in collections[section.settings.featured_collection].products limit: max_products -%}
+          {%- render 'bestseller-product-card', product: product -%}
+        {%- else -%}
+          <!-- Demo products when no collection products are available -->
+          <div class="customgrid__item">
+            <div class="product-card__wrap">
+              <div class="product-card__info">
+                <a href="#" class="product-card__title h3">New Launch Product 1</a>
+                <div class="product-card__subtitle">Premium Beauty Innovation</div>
+                <div class="product-card__reviews">
+                  <div class="jdgm-widget jdgm-preview-badge">
+                    <span class="jdgm-prev-badge__stars">★★★★★</span>
+                    <span class="jdgm-prev-badge__text">(25)</span>
+                  </div>
+                </div>
+                <div class="product-card__prices h4">
+                  <span class="product-card__price-text">MRP:</span>
+                  <del class="product-card__compareprice">₹ 3,490</del>
+                  <span class="product-card__price on-sale">₹ 2,790</span>
+                </div>
+                <div class="product-card__action">
+                  <button type="button" class="button button--full-width">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="customgrid__item">
+            <div class="product-card__wrap">
+              <div class="product-card__info">
+                <a href="#" class="product-card__title h3">New Launch Product 2</a>
+                <div class="product-card__subtitle">Advanced Skincare Formula</div>
+                <div class="product-card__reviews">
+                  <div class="jdgm-widget jdgm-preview-badge">
+                    <span class="jdgm-prev-badge__stars">★★★★★</span>
+                    <span class="jdgm-prev-badge__text">(18)</span>
+                  </div>
+                </div>
+                <div class="product-card__prices h4">
+                  <span class="product-card__price-text">MRP:</span>
+                  <del class="product-card__compareprice">₹ 2,890</del>
+                  <span class="product-card__price on-sale">₹ 2,190</span>
+                </div>
+                <div class="product-card__action">
+                  <button type="button" class="button button--full-width">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="customgrid__item">
+            <div class="product-card__wrap">
+              <div class="product-card__info">
+                <a href="#" class="product-card__title h3">New Launch Product 3</a>
+                <div class="product-card__subtitle">Luxury Beauty Treatment</div>
+                <div class="product-card__reviews">
+                  <div class="jdgm-widget jdgm-preview-badge">
+                    <span class="jdgm-prev-badge__stars">★★★★★</span>
+                    <span class="jdgm-prev-badge__text">(42)</span>
+                  </div>
+                </div>
+                <div class="product-card__prices h4">
+                  <span class="product-card__price-text">MRP:</span>
+                  <del class="product-card__compareprice">₹ 4,290</del>
+                  <span class="product-card__price on-sale">₹ 3,490</span>
+                </div>
+                <div class="product-card__action">
+                  <button type="button" class="button button--full-width">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="customgrid__item">
+            <div class="product-card__wrap">
+              <div class="product-card__info">
+                <a href="#" class="product-card__title h3">New Launch Product 4</a>
+                <div class="product-card__subtitle">Revolutionary Beauty Solution</div>
+                <div class="product-card__reviews">
+                  <div class="jdgm-widget jdgm-preview-badge">
+                    <span class="jdgm-prev-badge__stars">★★★★★</span>
+                    <span class="jdgm-prev-badge__text">(31)</span>
+                  </div>
+                </div>
+                <div class="product-card__prices h4">
+                  <span class="product-card__price-text">MRP:</span>
+                  <del class="product-card__compareprice">₹ 3,990</del>
+                  <span class="product-card__price on-sale">₹ 3,190</span>
+                </div>
+                <div class="product-card__action">
+                  <button type="button" class="button button--full-width">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+
+    {%- if section.settings.show_view_all and section.settings.view_all_link != blank -%}
+      <div class="viewalldiv">
+        <a href="{{ section.settings.view_all_link }}" class="viewallbutton">
+          {{ section.settings.view_all_text | default: 'VIEW ALL' }}
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "New Launches",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_prefix",
+      "default": "New",
+      "label": "Heading prefix"
+    },
+    {
+      "type": "text",
+      "id": "heading_suffix",
+      "default": "Launches",
+      "label": "Heading suffix"
+    },
+    {
+      "type": "collection",
+      "id": "featured_collection",
+      "label": "Featured collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 4,
+      "label": "Products to show"
+    },
+    {
+      "type": "product",
+      "id": "featured_product_1",
+      "label": "Featured Product 1"
+    },
+    {
+      "type": "product",
+      "id": "featured_product_2",
+      "label": "Featured Product 2"
+    },
+    {
+      "type": "product",
+      "id": "featured_product_3",
+      "label": "Featured Product 3"
+    },
+    {
+      "type": "product",
+      "id": "featured_product_4",
+      "label": "Featured Product 4"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "default": true,
+      "label": "Show view all button"
+    },
+    {
+      "type": "text",
+      "id": "view_all_text",
+      "default": "VIEW ALL",
+      "label": "View all button text"
+    },
+    {
+      "type": "url",
+      "id": "view_all_link",
+      "label": "View all link"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top margin",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "New Launches"
+    }
+  ]
+}
+{% endschema %}
