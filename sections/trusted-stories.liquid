@@ -21,9 +21,13 @@
 
   .trusted-stories-wrapper {
     width: 100%;
-    max-width: none;
-    margin: 0;
-    padding: 0 5px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   /* Price Section */
@@ -72,25 +76,78 @@
     overflow-x: hidden;
     padding-bottom: 20px;
     max-width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .video-slider-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .video-slider {
     display: flex;
     gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Center the slick slider */
+  .video-slider-wrapper .slick-list {
+    width: 100% !important;
+    margin: 0 auto !important;
+    text-align: center;
+  }
+
+  .video-slider-wrapper .slick-track {
+    display: flex !important;
+    margin: 0 auto !important;
+    text-align: center;
+  }
+
+  .video-slider-wrapper .slick-slide {
+    text-align: center;
+  }
+
+  /* Center slider when content is smaller than container */
+  .video-slider-wrapper .slick-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .video-slider-wrapper .slick-track {
+    display: flex !important;
+    justify-content: center;
   }
 
   .video-slide {
-    width: 180px;
+    width: 220px;
     cursor: pointer;
     text-align: center;
     background: #fff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
+  .video-thumbnail {
+    width: 100%;
+    height: auto;
+  }
+
   .video-thumbnail video {
     width: 100%;
+    height: auto;
+    min-height: 280px;
+    object-fit: cover;
     border-radius: 10px;
   }
 
@@ -398,7 +455,7 @@
     }
 
     .video-slide {
-      width: 160px;
+      width: 170px;
     }
 
     .video-popup .slick-prev {
@@ -406,15 +463,29 @@
     }
   }
 
-  @media only screen and (max-width: 576px) {
+  @media only screen and (max-width: 768px) {
     .video-slide {
-      width: 170px;
+      width: 200px;
+    }
+
+    .video-thumbnail video {
+      min-height: 250px;
     }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 576px) {
     .video-slide {
-      width: 175px;
+      width: 180px;
+    }
+
+    .video-thumbnail video {
+      min-height: 220px;
+    }
+  }
+
+  @media only screen and (max-width: 479px) {
+    .video-thumbnail video {
+      min-height: 200px;
     }
   }
 
@@ -433,6 +504,10 @@
 
     .video-slide {
       width: 160px;
+    }
+
+    .video-thumbnail video {
+      min-height: 180px;
     }
 
     .video-popup-content {
@@ -457,7 +532,8 @@
 <section class="video-slider-container trusted-stories-wrapper">
   <h2><em>Trusted</em><span>Stories</span></h2>
 
-  <div class="video-slider">
+  <div class="video-slider-wrapper">
+    <div class="video-slider">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
         {%- when 'video_story' -%}
@@ -488,6 +564,7 @@
           </div>
       {%- endcase -%}
     {%- endfor -%}
+    </div>
   </div>
 
   <!-- Popup with Slick Slider -->
@@ -608,6 +685,20 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     ],
   });
+
+  // Center the slider after initialization
+  setTimeout(function() {
+    const sliderList = document.querySelector('.video-slider .slick-list');
+    const sliderTrack = document.querySelector('.video-slider .slick-track');
+    if (sliderList && sliderTrack) {
+      const listWidth = sliderList.offsetWidth;
+      const trackWidth = sliderTrack.offsetWidth;
+      if (trackWidth < listWidth) {
+        const margin = (listWidth - trackWidth) / 2;
+        sliderTrack.style.marginLeft = margin + 'px';
+      }
+    }
+  }, 100);
 
   // Open popup and sync the video slider
   videoSlides.forEach((slide, index) => {
