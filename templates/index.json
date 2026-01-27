@@ -9,45 +9,6 @@
  */
 {
   "sections": {
-    "blocky_lys_image_embedded_U9gQQA": {
-      "type": "blocky-lys-image-embed",
-      "blocks": {
-        "title_kxx7Ay": {
-          "type": "title",
-          "settings": {
-            "title": "Introducing...",
-            "title_size": 70,
-            "title_color": "#000000"
-          }
-        },
-        "button_zXCDwy": {
-          "type": "button",
-          "settings": {
-            "button_label": "SHOP NOW",
-            "button_link": "shopify://collections/all",
-            "button_border_radius": "extra-round",
-            "button_style": "regular",
-            "button_background_color": "#000000",
-            "button_text_color": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "button_zXCDwy"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/https_3A_2F_2Fwww.rasluxuryoils.com_2Fcdn_2Fshop_2Ffiles_2Felixir_Desktop_1920x889_62919ef3-c900-4f12-a95d-75c491e96a99.jpg?v=1769185068",
-        "section_height": "650px",
-        "mobile_height": "300px",
-        "image_fit": "fill",
-        "overlay_opacity": 0,
-        "text_align": "vertical-bottom horizontal-left",
-        "full_screen": true,
-        "page_width": 1200,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "blocky_lys_scrolling_text_bar_Xgnxzm": {
       "type": "blocky-lys-scrolling-text-bar",
       "blocks": {
@@ -94,12 +55,15 @@
     "image_banner": {
       "type": "image-banner",
       "settings": {
+        "custom_image_url": "https://www.rasluxuryoils.com/cdn/shop/files/hair_care_desktop2_1920x889.jpg?v=1759311579",
+        "link": "/collections/all",
+        "full_size": true,
         "max_height": 500,
         "mobile_max_height": 300,
         "color_scheme": "scheme-1",
         "margin_top": 0,
-        "padding_top": 40,
-        "padding_bottom": 40
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "new_launches": {
@@ -264,9 +228,8 @@
     }
   },
   "order": [
-    "blocky_lys_image_embedded_U9gQQA",
-    "bestsellers",
     "image_banner",
+    "bestsellers",
     "new_launches",
     "trusted_stories",
     "blocky_lys_scrolling_text_bar_Xgnxzm",

@@ -1,8 +1,5 @@
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'component-rating.css' | asset_url | stylesheet_tag }}
-{{ 'component-price.css' | asset_url | stylesheet_tag }}
-{{ 'section-featured-product.css' | asset_url | stylesheet_tag }}
+{{ 'component-product-card.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .new-launches {
@@ -204,7 +201,7 @@
       {%- if section.settings.featured_product_1 != blank -%}
         {%- assign product1 = all_products[section.settings.featured_product_1] -%}
         {%- if product1 and product1.id -%}
-          {%- render 'bestseller-product-card', product: product1 -%}
+          {%- render 'product-card', product: product1 -%}
           {%- assign products_displayed = products_displayed | plus: 1 -%}
         {%- endif -%}
       {%- endif -%}
@@ -212,7 +209,7 @@
       {%- if section.settings.featured_product_2 != blank and products_displayed < max_products -%}
         {%- assign product2 = all_products[section.settings.featured_product_2] -%}
         {%- if product2 and product2.id -%}
-          {%- render 'bestseller-product-card', product: product2 -%}
+          {%- render 'product-card', product: product2 -%}
           {%- assign products_displayed = products_displayed | plus: 1 -%}
         {%- endif -%}
       {%- endif -%}
@@ -220,7 +217,7 @@
       {%- if section.settings.featured_product_3 != blank and products_displayed < max_products -%}
         {%- assign product3 = all_products[section.settings.featured_product_3] -%}
         {%- if product3 and product3.id -%}
-          {%- render 'bestseller-product-card', product: product3 -%}
+          {%- render 'product-card', product: product3 -%}
           {%- assign products_displayed = products_displayed | plus: 1 -%}
         {%- endif -%}
       {%- endif -%}
@@ -228,14 +225,14 @@
       {%- if section.settings.featured_product_4 != blank and products_displayed < max_products -%}
         {%- assign product4 = all_products[section.settings.featured_product_4] -%}
         {%- if product4 and product4.id -%}
-          {%- render 'bestseller-product-card', product: product4 -%}
+          {%- render 'product-card', product: product4 -%}
           {%- assign products_displayed = products_displayed | plus: 1 -%}
         {%- endif -%}
       {%- endif -%}
 
       {%- if products_displayed == 0 -%}
         {%- for product in collections[section.settings.featured_collection].products limit: max_products -%}
-          {%- render 'bestseller-product-card', product: product -%}
+          {%- render 'product-card', product: product -%}
         {%- else -%}
           <!-- Demo products when no collection products are available -->
           <div class="customgrid__item">

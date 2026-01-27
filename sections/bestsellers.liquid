@@ -1,8 +1,5 @@
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'component-rating.css' | asset_url | stylesheet_tag }}
-{{ 'component-price.css' | asset_url | stylesheet_tag }}
-{{ 'section-featured-product.css' | asset_url | stylesheet_tag }}
+{{ 'component-product-card.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .featuredcollections {
@@ -37,109 +34,6 @@
     grid-template-columns: repeat(4, minmax(350px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
-  }
-
-  .customgrid__item {
-    position: relative;
-    height: 100%;
-  }
-
-  .product-card__wrap {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s ease;
-    overflow: hidden;
-  }
-
-  .product-card__wrap:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-  }
-
-  .product-card__badge__imag {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 2;
-  }
-
-  .best-img-red {
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-  }
-
-  .product-card__badges {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 2;
-  }
-
-  .product-card__badge {
-    background: #e74c3c;
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.875rem;
-    font-weight: 600;
-  }
-
-  .product-card__info {
-    padding: 1.5rem;
-    height: 220px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .product-card__title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    line-height: 1.3;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-  }
-
-  .product-card__subtitle {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 0.75rem;
-    line-height: 1.4;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-  }
-
-  .product-card__prices {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-  }
-
-  .product-card__price-text {
-    color: #666;
-    font-size: 0.875rem;
-  }
-
-  .product-card__price {
-    color: #e74c3c;
-    font-weight: 600;
-  }
-
-  .product-card__compareprice {
-    color: #999;
-    text-decoration: line-through;
   }
 
   .viewalldiv {
@@ -197,225 +91,29 @@
       <span>{{ section.settings.heading_suffix }}</span>
     </h2>
 
-
     <div class="customproductgrid" id="template--{{ section.id }}__{{ section.id }}">
-      <!-- Demo products for testing - will show until real products are available -->
-      <div class="customgrid__item">
-        <div class="product-card__wrap">
-          <a href="#" class="media media--transparent media--hover-effect media--square product-card__link">
-            <img srcset="//www.rasluxuryoils.com/cdn/shop/files/15ml_1_1ffbe76e-f9b2-4ae8-a1b1-bfb46c32d34b_165x.jpg?v=1759729782 165w,//www.rasluxuryoils.com/cdn/shop/files/15ml_1_1ffbe76e-f9b2-4ae8-a1b1-bfb46c32d34b_360x.jpg?v=1759729782 360w,//www.rasluxuryoils.com/cdn/shop/files/15ml_1_1ffbe76e-f9b2-4ae8-a1b1-bfb46c32d34b_533x.jpg?v=1759729782 533w,//www.rasluxuryoils.com/cdn/shop/files/15ml_1_1ffbe76e-f9b2-4ae8-a1b1-bfb46c32d34b_720x.jpg?v=1759729782 720w,//www.rasluxuryoils.com/cdn/shop/files/15ml_1_1ffbe76e-f9b2-4ae8-a1b1-bfb46c32d34b_940x.jpg?v=1759729782 940w,//www.rasluxuryoils.com/cdn/shop/files/15ml_1_1ffbe76e-f9b2-4ae8-a1b1-bfb46c32d34b_1066x.jpg?v=1759729782 1066w"
-              src="//www.rasluxuryoils.com/cdn/shop/files/15ml_1_1ffbe76e-f9b2-4ae8-a1b1-bfb46c32d34b_533x.jpg?v=1759729782"
-              sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-              alt="24K Gold Radiance Face Elixir"
-              loading="lazy"
-              class="product-card__image motion-reduce"
-              width="533"
-              height="533">
-            <img srcset="//www.rasluxuryoils.com/cdn/shop/files/2_94ae1725-7b4d-45e7-b1e2-63faaa80f46f_165x.jpg?v=1759729782 165w,//www.rasluxuryoils.com/cdn/shop/files/2_94ae1725-7b4d-45e7-b1e2-63faaa80f46f_360x.jpg?v=1759729782 360w,//www.rasluxuryoils.com/cdn/shop/files/2_94ae1725-7b4d-45e7-b1e2-63faaa80f46f_533x.jpg?v=1759729782 533w,//www.rasluxuryoils.com/cdn/shop/files/2_94ae1725-7b4d-45e7-b1e2-63faaa80f46f_720x.jpg?v=1759729782 720w,//www.rasluxuryoils.com/cdn/shop/files/2_94ae1725-7b4d-45e7-b1e2-63faaa80f46f_940x.jpg?v=1759729782 940w,//www.rasluxuryoils.com/cdn/shop/files/2_94ae1725-7b4d-45e7-b1e2-63faaa80f46f_1066x.jpg?v=1759729782 1066w"
-              src="//www.rasluxuryoils.com/cdn/shop/files/2_94ae1725-7b4d-45e7-b1e2-63faaa80f46f_533x.jpg?v=1759729782"
-              sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-              alt="24K Gold Radiance Face Elixir"
-              loading="lazy"
-              class="product-card__image motion-reduce"
-              width="533"
-              height="533">
-          </a>
+      {%- liquid
+        assign product1 = all_products[section.settings.featured_product_1]
+        assign product2 = all_products[section.settings.featured_product_2]
+        assign product3 = all_products[section.settings.featured_product_3]
+        assign product4 = all_products[section.settings.featured_product_4]
+      -%}
 
-          <div class="product-card__badges">
-            <span class="product-card__badge on-sale" aria-hidden="true">- 25%</span>
-          </div>
+      {%- if product1 and product1 != empty -%}
+        {% render 'product-card', product: product1 %}
+      {%- endif -%}
 
-          <div class="product-card__info">
-            <a href="#" class="product-card__title h3">24K Gold Radiance Face Elixir</a>
-            <div class="product-card__subtitle">Award Winning Face Oil with 24K Gold</div>
-            <div class="product-card__reviews">
-              <div class="jdgm-widget jdgm-preview-badge">
-                <span class="jdgm-prev-badge__stars">★★★★★</span>
-                <span class="jdgm-prev-badge__text">(1502)</span>
-              </div>
-            </div>
-            <div class="product-card__prices h4">
-              <span class="product-card__price-text">MRP:</span>
-              <del class="product-card__compareprice">₹ 2,990</del>
-              <span class="product-card__price on-sale">₹ 2,240</span>
-            </div>
-            <div class="product-card__options">
-              <select name="id">
-                <option value="variant1">15ml</option>
-                <option value="variant2">6ml</option>
-              </select>
-            </div>
-            <div class="product-card__action">
-              <button type="button" class="button button--full-width">Add to cart</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      {%- if product2 and product2 != empty -%}
+        {% render 'product-card', product: product2 %}
+      {%- endif -%}
 
-      <div class="customgrid__item">
-        <div class="product-card__wrap">
-          <a href="#" class="media media--transparent media--hover-effect media--square product-card__link">
-            <img srcset="//www.rasluxuryoils.com/cdn/shop/files/1_eabddeac-f0fb-4633-b2a5-685a3774ce90_165x.jpg?v=1759729346 165w,//www.rasluxuryoils.com/cdn/shop/files/1_eabddeac-f0fb-4633-b2a5-685a3774ce90_360x.jpg?v=1759729346 360w,//www.rasluxuryoils.com/cdn/shop/files/1_eabddeac-f0fb-4633-b2a5-685a3774ce90_533x.jpg?v=1759729346 533w,//www.rasluxuryoils.com/cdn/shop/files/1_eabddeac-f0fb-4633-b2a5-685a3774ce90_720x.jpg?v=1759729346 720w,//www.rasluxuryoils.com/cdn/shop/files/1_eabddeac-f0fb-4633-b2a5-685a3774ce90_940x.jpg?v=1759729346 940w,//www.rasluxuryoils.com/cdn/shop/files/1_eabddeac-f0fb-4633-b2a5-685a3774ce90_1066x.jpg?v=1759729346 1066w"
-              src="//www.rasluxuryoils.com/cdn/shop/files/1_eabddeac-f0fb-4633-b2a5-685a3774ce90_533x.jpg?v=1759729346"
-              sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-              alt="Lash-ious Lash & Brow Growth Serum"
-              loading="lazy"
-              class="product-card__image motion-reduce"
-              width="533"
-              height="533">
-            <img srcset="//www.rasluxuryoils.com/cdn/shop/files/2_d173ff29-facd-4de4-bd1b-a85ae23bd238_1_165x.webp?v=1759729346 165w,//www.rasluxuryoils.com/cdn/shop/files/2_d173ff29-facd-4de4-bd1b-a85ae23bd238_1_360x.webp?v=1759729346 360w,//www.rasluxuryoils.com/cdn/shop/files/2_d173ff29-facd-4de4-bd1b-a85ae23bd238_1_533x.webp?v=1759729346 533w,//www.rasluxuryoils.com/cdn/shop/files/2_d173ff29-facd-4de4-bd1b-a85ae23bd238_1_720x.webp?v=1759729346 720w,//www.rasluxuryoils.com/cdn/shop/files/2_d173ff29-facd-4de4-bd1b-a85ae23bd238_1_940x.webp?v=1759729346 940w,//www.rasluxuryoils.com/cdn/shop/files/2_d173ff29-facd-4de4-bd1b-a85ae23bd238_1_1066x.webp?v=1759729346 1066w"
-              src="//www.rasluxuryoils.com/cdn/shop/files/2_d173ff29-facd-4de4-bd1b-a85ae23bd238_1_533x.webp?v=1759729346"
-              sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-              alt="Lash-ious Lash & Brow Growth Serum"
-              loading="lazy"
-              class="product-card__image motion-reduce"
-              width="533"
-              height="533">
-          </a>
+      {%- if product3 and product3 != empty -%}
+        {% render 'product-card', product: product3 %}
+      {%- endif -%}
 
-          <div class="product-card__badge__imag">
-            <span class="best-img-red bst-str" aria-hidden="true">
-              <img src="https://cdn.shopify.com/s/files/1/0081/9871/7493/files/best_seller_sticker_38ebd177-7618-4b11-a103-2cf11f8c49d8.png" alt="Bestseller" width="80" height="80">
-            </span>
-          </div>
-          <div class="product-card__badges">
-            <span class="product-card__badge on-sale" aria-hidden="true">- 12%</span>
-          </div>
-          <div class="product-card__info">
-            <a href="#" class="product-card__title h3">Lash-ious Lash & Brow Growth Serum</a>
-            <div class="product-card__subtitle">Naturally longer, thicker lashes & brows</div>
-            <div class="product-card__reviews">
-              <div class="jdgm-widget jdgm-preview-badge">
-                <span class="jdgm-prev-badge__stars">★★★★★</span>
-                <span class="jdgm-prev-badge__text">(395)</span>
-              </div>
-            </div>
-            <div class="product-card__prices h4">
-              <span class="product-card__price-text">MRP:</span>
-              <del class="product-card__compareprice">₹ 1,690</del>
-              <span class="product-card__price on-sale">₹ 1,485</span>
-            </div>
-            <div class="product-card__action">
-              <button type="button" class="button button--full-width">Add to cart</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="customgrid__item">
-        <div class="product-card__wrap">
-          <a href="#" class="media media--transparent media--hover-effect media--square product-card__link">
-            <img srcset="//www.rasluxuryoils.com/cdn/shop/files/50g_2_165x.jpg?v=1730115376 165w,//www.rasluxuryoils.com/cdn/shop/files/50g_2_360x.jpg?v=1730115376 360w,//www.rasluxuryoils.com/cdn/shop/files/50g_2_533x.jpg?v=1730115376 533w,//www.rasluxuryoils.com/cdn/shop/files/50g_2_720x.jpg?v=1730115376 720w,//www.rasluxuryoils.com/cdn/shop/files/50g_2_940x.jpg?v=1730115376 940w,//www.rasluxuryoils.com/cdn/shop/files/50g_2_1066x.jpg?v=1730115376 1066w"
-              src="//www.rasluxuryoils.com/cdn/shop/files/50g_2_533x.jpg?v=1730115376"
-              sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-              alt="Super Recharge Bakuchiol Night Cream"
-              loading="lazy"
-              class="product-card__image motion-reduce"
-              width="533"
-              height="533">
-            <img srcset="//www.rasluxuryoils.com/cdn/shop/files/2_c32db8cb-b06c-4374-b381-3e54d8aa4418_165x.jpg?v=1721973837 165w,//www.rasluxuryoils.com/cdn/shop/files/2_c32db8cb-b06c-4374-b381-3e54d8aa4418_360x.jpg?v=1721973837 360w,//www.rasluxuryoils.com/cdn/shop/files/2_c32db8cb-b06c-4374-b381-3e54d8aa4418_533x.jpg?v=1721973837 533w,//www.rasluxuryoils.com/cdn/shop/files/2_c32db8cb-b06c-4374-b381-3e54d8aa4418_720x.jpg?v=1721973837 720w,//www.rasluxuryoils.com/cdn/shop/files/2_c32db8cb-b06c-4374-b381-3e54d8aa4418_940x.jpg?v=1721973837 940w,//www.rasluxuryoils.com/cdn/shop/files/2_c32db8cb-b06c-4374-b381-3e54d8aa4418_1066x.jpg?v=1721973837 1066w"
-              src="//www.rasluxuryoils.com/cdn/shop/files/2_c32db8cb-b06c-4374-b381-3e54d8aa4418_533x.jpg?v=1721973837"
-              sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-              alt="Super Recharge Bakuchiol Night Cream"
-              loading="lazy"
-              class="product-card__image motion-reduce"
-              width="533"
-              height="533">
-          </a>
-
-          <div class="product-card__badge__imag">
-            <span class="best-img-red bst-str" aria-hidden="true">
-              <img src="https://cdn.shopify.com/s/files/1/0081/9871/7493/files/best_seller_sticker_38ebd177-7618-4b11-a103-2cf11f8c49d8.png" alt="Bestseller" width="80" height="80">
-            </span>
-          </div>
-          <div class="product-card__badges">
-            <span class="product-card__badge on-sale" aria-hidden="true">- 25%</span>
-          </div>
-          <div class="product-card__info">
-            <a href="#" class="product-card__title h3">Super Recharge Bakuchiol Night Cream</a>
-            <div class="product-card__subtitle">Anti-aging and plumping moisturizer</div>
-            <div class="product-card__reviews">
-              <div class="jdgm-widget jdgm-preview-badge">
-                <span class="jdgm-prev-badge__stars">★★★★★</span>
-                <span class="jdgm-prev-badge__text">(554)</span>
-              </div>
-            </div>
-            <div class="product-card__prices h4">
-              <span class="product-card__price-text">MRP:</span>
-              <del class="product-card__compareprice">₹ 2,890</del>
-              <span class="product-card__price on-sale">₹ 2,165</span>
-            </div>
-            <div class="product-card__options">
-              <select name="id">
-                <option value="variant1">50gm</option>
-                <option value="variant2">15gm</option>
-                <option value="variant3">50gm+50gm</option>
-              </select>
-            </div>
-            <div class="product-card__action">
-              <button type="button" class="button button--full-width">Add to cart</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="customgrid__item">
-        <div class="product-card__wrap">
-          <a href="#" class="media media--transparent media--hover-effect media--square product-card__link">
-            <img srcset="//www.rasluxuryoils.com/cdn/shop/files/PinkCashmere_1_47159d44-85ea-4b8c-b293-45aeede098fe_165x.jpg?v=1710486647 165w,//www.rasluxuryoils.com/cdn/shop/files/PinkCashmere_1_47159d44-85ea-4b8c-b293-45aeede098fe_360x.jpg?v=1710486647 360w,//www.rasluxuryoils.com/cdn/shop/files/PinkCashmere_1_47159d44-85ea-4b8c-b293-45aeede098fe_533x.jpg?v=1710486647 533w,//www.rasluxuryoils.com/cdn/shop/files/PinkCashmere_1_47159d44-85ea-4b8c-b293-45aeede098fe_720x.jpg?v=1710486647 720w,//www.rasluxuryoils.com/cdn/shop/files/PinkCashmere_1_47159d44-85ea-4b8c-b293-45aeede098fe_940x.jpg?v=1710486647 940w,//www.rasluxuryoils.com/cdn/shop/files/PinkCashmere_1_47159d44-85ea-4b8c-b293-45aeede098fe_1066x.jpg?v=1710486647 1066w"
-              src="//www.rasluxuryoils.com/cdn/shop/files/PinkCashmere_1_47159d44-85ea-4b8c-b293-45aeede098fe_533x.jpg?v=1710486647"
-              sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-              alt="Lumiere Satin Matte Lipstick"
-              loading="lazy"
-              class="product-card__image motion-reduce"
-              width="533"
-              height="533">
-            <img srcset="//www.rasluxuryoils.com/cdn/shop/files/1_8e2a3964-639f-42c2-8339-969f4a342628_165x.png?v=1710486647 165w,//www.rasluxuryoils.com/cdn/shop/files/1_8e2a3964-639f-42c2-8339-969f4a342628_360x.png?v=1710486647 360w,//www.rasluxuryoils.com/cdn/shop/files/1_8e2a3964-639f-42c2-8339-969f4a342628_533x.png?v=1710486647 533w,//www.rasluxuryoils.com/cdn/shop/files/1_8e2a3964-639f-42c2-8339-969f4a342628_720x.png?v=1710486647 720w,//www.rasluxuryoils.com/cdn/shop/files/1_8e2a3964-639f-42c2-8339-969f4a342628_940x.png?v=1710486647 940w,//www.rasluxuryoils.com/cdn/shop/files/1_8e2a3964-639f-42c2-8339-969f4a342628_1066x.png?v=1710486647 1066w"
-              src="//www.rasluxuryoils.com/cdn/shop/files/1_8e2a3964-639f-42c2-8339-969f4a342628_533x.png?v=1710486647"
-              sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-              alt="Lumiere Satin Matte Lipstick"
-              loading="lazy"
-              class="product-card__image motion-reduce"
-              width="533"
-              height="533">
-          </a>
-
-          <div class="product-card__badge__imag">
-            <span class="best-img-red bst-str" aria-hidden="true">
-              <img src="https://cdn.shopify.com/s/files/1/0081/9871/7493/files/best_seller_sticker_38ebd177-7618-4b11-a103-2cf11f8c49d8.png" alt="Bestseller" width="80" height="80">
-            </span>
-          </div>
-          <div class="product-card__badges">
-            <span class="product-card__badge on-sale" aria-hidden="true">- 25%</span>
-          </div>
-          <div class="product-card__info">
-            <a href="#" class="product-card__title h3">Lumiere Satin Matte Lipstick</a>
-            <div class="product-card__subtitle">Creamy Long Stay Comfortable Matte</div>
-            <div class="product-card__reviews">
-              <div class="jdgm-widget jdgm-preview-badge">
-                <span class="jdgm-prev-badge__stars">★★★★★</span>
-                <span class="jdgm-prev-badge__text">(183)</span>
-              </div>
-            </div>
-            <div class="product-card__prices h4">
-              <span class="product-card__price-text">MRP:</span>
-              <del class="product-card__compareprice">₹ 2,290</del>
-              <span class="product-card__price on-sale">₹ 1,718</span>
-            </div>
-            <div class="product-card__options">
-              <select name="id">
-                <option value="variant1">Pink Cashmere</option>
-                <option value="variant2">Nude Silk</option>
-                <option value="variant3">Velvet Mauve</option>
-                <option value="variant4">Champagne Blush</option>
-              </select>
-            </div>
-            <div class="product-card__action">
-              <button type="button" class="button button--full-width">Add to cart</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      {%- if product4 and product4 != empty -%}
+        {% render 'product-card', product: product4 %}
+      {%- endif -%}
     </div>
 
     {%- if section.settings.show_view_all and section.settings.view_all_link != blank -%}

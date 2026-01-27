@@ -41,24 +41,7 @@
         {% endif %}
       </div>
   
-      <div class="blocky-media-hero-text-wrap{% if section.settings.overlay_opacity != 0 %} blocky-media-hero-text-wrap-opacity{% endif %}"> 
-        <div class="blocky-page-width blocky-media-hero-text-content {{ section.settings.text_align }}">
-          {%- for block in section.blocks -%}
-            {% case block.type %}
-              {%- when 'title' -%}
-                {% render 'blocky-lys-title', block: block %}
-              {%- when 'body' -%}
-                {% render 'blocky-lys-body', block: block %}
-              {%- when 'button' -%}
-                {%- if block.settings.button_label != blank -%}
-                  <div>
-                    {% render 'blocky-lys-button', block: block %}
-                  </div>
-                {%- endif -%}
-            {%- endcase -%}
-          {%- endfor -%}
-        </div>
-      </div>
+
     </div>
   </div>
 </div>

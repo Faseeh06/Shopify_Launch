@@ -1,0 +1,128 @@
+/* RAS Luxury Oils Inspired Product Page Styles */
+
+.product__info-container .product__title h1 {
+    font-family: var(--font-heading-family);
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.product__info-container .product__text.caption-with-letter-spacing {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+}
+
+/* Price Styling */
+.product__info-container .price .price-item--regular {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e74c3c;
+    /* RAS Red/Sale Color */
+}
+
+.product__info-container .price .price-item--sale {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e74c3c;
+}
+
+.product__info-container .price s.price-item--regular {
+    color: #999;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+
+/* Add to Cart Button */
+.product-form__submit {
+    background-color: #e6b550;
+    /* RAS Gold */
+    color: #ffffff;
+    border: none;
+    border-radius: 1px;
+    /* Slightly rounded */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product-form__submit:hover {
+    background-color: #d4a549;
+    /* Darker Gold */
+    transform: translateY(-1px);
+}
+
+.product-form__submit:disabled {
+    background-color: #f4f4f4;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* Icons Row (below buy buttons) */
+.product-icons-row {
+    display: flex;
+    justify-content: space-between;
+    /* Or flex-start with gap */
+    gap: 15px;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.product-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #555;
+    max-width: 80px;
+}
+
+.product-icon-item svg,
+.product-icon-item img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0.5rem;
+    object-fit: contain;
+}
+
+/* Accordions / Collapsible Tabs */
+.product__accordion .accordion__title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    padding: 1rem 0;
+}
+
+.product__accordion .accordion__content {
+    padding-bottom: 1rem;
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.product__accordion details {
+    border-bottom: 1px solid #eee;
+}
+
+.product__accordion details[open]>summary~* {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Review Stars specific overrides if needed */
+.rating-star:before {
+    color: #e6b550;
+}
+
+/* Image Gallery Thumbs */
+.thumbnail-list__item.is-active img {
+    border-color: #e6b550;
+}

@@ -1,0 +1,162 @@
+{% comment %}
+  Dynamic Product Card
+  
+  Accepts:
+  - product: {Object} Product Liquid object (required)
+  - show_bestseller_badge: {Boolean} Show bestseller badge if product has 'bestseller' tag (optional, default: true)
+  - lazy_load: {Boolean} Lazy load images (optional, default: true)
+  
+  Usage:
+  {% render 'product-card', product: product %}
+{% endcomment %}
+
+{%- if product and product != empty -%}
+  {%- liquid
+    assign show_bestseller_badge = show_bestseller_badge | default: true
+    assign lazy_load = lazy_load | default: true
+  -%}
+
+  <div class="customgrid__item">
+    <marmeto-product-card class="product-card" data-handle="{{ product.handle }}">
+      <div class="product-card__wrap">
+        <div class="flits-collection-page-wishlist-button" 
+             data-flits-product-handle="{{ product.handle }}" 
+             data-flits-product-id="{{ product.id }}" 
+             data-flits-product-title="{{ product.title }}" 
+             data-flits-product-image="{{ product.featured_image | image_url }}" 
+             data-flits-product-wsl-count=""></div>
+
+        <a href="{{ product.url }}" class="media media--transparent media--hover-effect media--square product-card__link">
+          {%- if product.featured_image -%}
+            <img srcset="
+              {%- if product.featured_image.width >= 165 -%}{{ product.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if product.featured_image.width >= 360 -%}{{ product.featured_image | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if product.featured_image.width >= 533 -%}{{ product.featured_image | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if product.featured_image.width >= 720 -%}{{ product.featured_image | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if product.featured_image.width >= 940 -%}{{ product.featured_image | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if product.featured_image.width >= 1066 -%}{{ product.featured_image | image_url: width: 1066 }} 1066w{%- endif -%}"
+              src="{{ product.featured_image | image_url: width: 533 }}"
+              sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+              alt="{{ product.featured_image.alt | escape }}"
+              {% if lazy_load %}loading="lazy"{% endif %}
+              class="product-card__image motion-reduce"
+              width="{{ product.featured_image.width }}"
+              height="{{ product.featured_image.height }}">
+
+            {%- if product.images[1] -%}
+              <img srcset="
+                {%- if product.images[1].width >= 165 -%}{{ product.images[1] | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if product.images[1].width >= 360 -%}{{ product.images[1] | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if product.images[1].width >= 533 -%}{{ product.images[1] | image_url: width: 533 }} 533w,{%- endif -%}
+                {%- if product.images[1].width >= 720 -%}{{ product.images[1] | image_url: width: 720 }} 720w,{%- endif -%}
+                {%- if product.images[1].width >= 940 -%}{{ product.images[1] | image_url: width: 940 }} 940w,{%- endif -%}
+                {%- if product.images[1].width >= 1066 -%}{{ product.images[1] | image_url: width: 1066 }} 1066w{%- endif -%}"
+                src="{{ product.images[1] | image_url: width: 533 }}"
+                sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                alt="{{ product.images[1].alt | escape }}"
+                {% if lazy_load %}loading="lazy"{% endif %}
+                class="product-card__image motion-reduce"
+                width="{{ product.images[1].width }}"
+                height="{{ product.images[1].height }}">
+            {%- endif -%}
+          {%- endif -%}
+        </a>
+
+        {%- if show_bestseller_badge and product.tags contains 'bestseller' -%}
+          <div class="product-card__badge__imag">
+            <span class="best-img-red bst-str" aria-hidden="true">
+              <img src="https://cdn.shopify.com/s/files/1/0081/9871/7493/files/best_seller_sticker_38ebd177-7618-4b11-a103-2cf11f8c49d8.png?v=1767008027" 
+                   alt="Bestseller"
+                   width="80"
+                   height="80">
+            </span>
+          </div>
+        {%- endif -%}
+
+        {%- if product.compare_at_price > product.price -%}
+          {%- assign discount_amount = product.compare_at_price | minus: product.price -%}
+          {%- assign discount_percentage = discount_amount | times: 100 | divided_by: product.compare_at_price | round -%}
+          <div class="product-card__badges">
+            <span class="product-card__badge on-sale" aria-hidden="true">
+              - {{ discount_percentage }}%
+            </span>
+          </div>
+        {%- endif -%}
+
+        <div class="product-card__info">
+          <a href="{{ product.url }}" class="product-card__title h3">
+            {{ product.title | escape }}
+          </a>
+
+          <div class="product-card__subtitle">
+            {%- if product.metafields.custom.product_subtitle -%}
+              {{ product.metafields.custom.product_subtitle }}
+            {%- else -%}
+              {%- comment -%}Add default subtitle based on product type or tags{%- endcomment -%}
+              {%- if product.tags contains 'face-oil' -%}
+                Naturally nourishing face oil
+              {%- elsif product.tags contains 'serum' -%}
+                Premium skincare serum
+              {%- elsif product.tags contains 'cream' -%}
+                Hydrating skincare cream
+              {%- elsif product.tags contains 'lipstick' -%}
+                Long-lasting matte lipstick
+              {%- else -%}
+                Premium beauty product
+              {%- endif -%}
+            {%- endif -%}
+          </div>
+
+          <div class="product-card__reviews">
+            {%- if product.metafields.reviews.rating.value -%}
+              <div class="jdgm-widget jdgm-preview-badge jdgm--done-setup" 
+                   data-id="{{ product.id }}" 
+                   data-template="collection" 
+                   data-auto-install="false">
+                <div style="display:none" class="jdgm-prev-badge" 
+                     data-average-rating="{{ product.metafields.reviews.rating.value.rating }}" 
+                     data-number-of-reviews="{{ product.metafields.reviews.rating_count }}" 
+                     data-number-of-questions="0">
+                  <span class="jdgm-prev-badge__stars" 
+                        data-score="{{ product.metafields.reviews.rating.value.rating }}" 
+                        tabindex="0" 
+                        aria-label="{{ product.metafields.reviews.rating.value.rating }} stars" 
+                        role="button">
+                    {%- for i in (1..5) -%}
+                      <span class="jdgm-star jdgm--on"></span>
+                    {%- endfor -%}
+                  </span>
+                  <span class="jdgm-prev-badge__text">({{ product.metafields.reviews.rating_count }})</span>
+                </div>
+              </div>
+            {%- endif -%}
+          </div>
+
+          <div class="product-card__prices h4">
+            <span class="product-card__price-text">MRP:</span>
+            {%- if product.compare_at_price > product.price -%}
+              <del class="product-card__compareprice">₹ {{ product.compare_at_price | money_without_currency }}</del>
+            {%- endif -%}
+            <span class="product-card__price {%- if product.compare_at_price > product.price -%}on-sale{%- endif -%}">
+              ₹ {{ product.price | money_without_currency }}
+            </span>
+          </div>
+
+          {%- if product.has_only_default_variant == false -%}
+            <div class="product-card__options">
+              <select name="id">
+                {%- for variant in product.variants -%}
+                  <option value="{{ variant.id }}">{{ variant.title }}</option>
+                {%- endfor -%}
+              </select>
+            </div>
+          {%- endif -%}
+
+          <div class="product-card__action">
+            <button type="button" class="button button--full-width">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </marmeto-product-card>
+  </div>
+{%- endif -%}

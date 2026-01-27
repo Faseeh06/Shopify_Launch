@@ -212,6 +212,40 @@
 {% schema %}
 {
   "name": "RAS Footer",
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "subtext",
+          "label": "Subtext"
+        }
+      ]
+    },
+    {
+      "type": "link_list",
+      "name": "Link List",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu"
+        }
+      ]
+    }
+  ],
   "settings": [
     {
       "type": "header",

@@ -25,18 +25,33 @@
     width: 100%;
     height: auto;
     display: block;
-    max-height: {{ section.settings.max_height }}px;
+    {%- unless section.settings.full_size -%}
+      max-height: {{ section.settings.max_height }}px;
+    {%- endunless -%}
   }
 
   @media screen and (max-width: 749px) {
     .image-banner__image {
-      max-height: {{ section.settings.mobile_max_height }}px;
+      {%- unless section.settings.full_size -%}
+        max-height: {{ section.settings.mobile_max_height }}px;
+      {%- endunless -%}
     }
   }
+
+  {%- if section.settings.full_size -%}
+    .image-banner__image {
+      max-height: none;
+      object-fit: cover; /* Ensures it covers if there are other constraints, though width 100% height auto usually works */
+      border-radius: 0 !important;
+    }
+    .image-banner__container {
+      border-radius: 0 !important;
+    }
+  {%- endif -%}
 {%- endstyle -%}
 
 <section class="image-banner color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
-  <div class="image-banner__container">
+  <{% if section.settings.link != blank %}a href="{{ section.settings.link }}"{% else %}div{% endif %} class="image-banner__container">
     {%- if section.settings.image != blank -%}
       <img
         src="{{ section.settings.image | image_url: width: 1920 }}"
@@ -52,6 +67,15 @@
         loading="lazy"
         width="{{ section.settings.image.width }}"
         height="{{ section.settings.image.height }}"
+      >
+    {%- elsif section.settings.custom_image_url != blank -%}
+      <img
+        src="{{ section.settings.custom_image_url }}"
+        alt="Custom Banner"
+        class="image-banner__image"
+        loading="lazy"
+        width="1920"
+        height="889"
       >
     {%- else -%}
       <img
@@ -70,7 +94,7 @@
         height="889"
       >
     {%- endif -%}
-  </div>
+  </{% if section.settings.link != blank %}a{% else %}div{% endif %}>
 </section>
 
 {% schema %}
@@ -81,6 +105,22 @@
       "type": "image_picker",
       "id": "image",
       "label": "Banner Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_size",
+      "label": "Full Size Image (No Max Height/Borders)",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "custom_image_url",
+      "label": "Custom Image URL"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
     },
     {
       "type": "range",

@@ -1,4 +1,9 @@
 :root {
+
+/* Set store background color */
+body {
+  background: #fefbf4 !important;
+}
   --alpha-button-background: 1;
   --alpha-button-border: 1;
   --alpha-link: 0.85;

@@ -1,6 +1,5 @@
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-product-card.css' | asset_url | stylesheet_tag }}
 
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
@@ -40,7 +39,7 @@
   {%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
     {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
-      <facet-filters-form class="facets facets-vertical-sort page-width small-hide">
+      <facet-filters-form class="facets facets-vertical-sort page-width collection-page-width-override small-hide">
         <form class="facets-vertical-form" id="FacetSortForm">
           <div class="facet-filters sorting caption">
             <div class="facet-filters__field">
@@ -95,13 +94,13 @@
       </facet-filters-form>
     {%- endif -%}
 
-    <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
+    <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width collection-page-width-override{% endif %}">
       {{ 'component-facets.css' | asset_url | stylesheet_tag }}
       <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
       {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
         <aside
           aria-labelledby="verticalTitle"
-          class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+          class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width collection-page-width-override{% endif %}"
           id="main-collection-filters"
           data-id="{{ section.id }}"
         >
@@ -123,7 +122,7 @@
         {% endif %}
       >
         {%- if collection.products.size == 0 -%}
-          <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
+          <div class="collection collection--empty page-width collection-page-width-override" id="product-grid" data-id="{{ section.id }}">
             <div class="loading-overlay gradient"></div>
             <div class="title-wrapper center">
               <h2 class="title title--primary">
@@ -138,7 +137,7 @@
           </div>
         {%- else -%}
           <div
-            class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+            class="collection{% if section.settings.filter_type != 'vertical' %} page-width collection-page-width-override{% endif %}"
           >
             <div class="loading-overlay gradient"></div>
             <ul
@@ -163,17 +162,8 @@
                     style="--animation-order: {{ forloop.index }};"
                   {% endif %}
                 >
-                  {% render 'card-product',
-                    card_product: product,
-                    media_aspect_ratio: section.settings.image_ratio,
-                    image_shape: section.settings.image_shape,
-                    show_secondary_image: section.settings.show_secondary_image,
-                    show_vendor: section.settings.show_vendor,
-                    show_rating: section.settings.show_rating,
-                    lazy_load: lazy_load,
-                    skip_styles: skip_card_product_styles,
-                    quick_add: section.settings.quick_add,
-                    section_id: section.id
+                  {% render 'product-card',
+                    product: product
                   %}
                 </li>
                 {%- assign skip_card_product_styles = true -%}
