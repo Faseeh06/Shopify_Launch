@@ -1270,3 +1270,60 @@ class BulkAdd extends HTMLElement {
 if (!customElements.get('bulk-add')) {
   customElements.define('bulk-add', BulkAdd);
 }
+
+window.handleProductCardAddToCart = function(button) {
+  const card = button.closest('.product-card__info') || button.closest('.product-card');
+  if (!card) return;
+
+  const variantInput = card.querySelector('[name="id"]');
+  if (!variantInput) return;
+
+  const variantId = variantInput.value;
+  
+  button.classList.add('loading');
+  const spinner = button.querySelector('.loading-overlay__spinner');
+  if (spinner) spinner.classList.remove('hidden');
+
+  const config = fetchConfig('javascript');
+  config.headers['X-Requested-With'] = 'XMLHttpRequest';
+  delete config.headers['Content-Type'];
+
+  const formData = new FormData();
+  formData.append('id', variantId);
+  formData.append('quantity', 1);
+
+  const cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+  if (cart) {
+    formData.append(
+      'sections',
+      cart.getSectionsToRender().map((section) => section.id)
+    );
+    formData.append('sections_url', window.location.pathname);
+    cart.setActiveElement(document.activeElement);
+  }
+
+  config.body = formData;
+
+  fetch(window.routes.cart_add_url, config)
+    .then((response) => response.json())
+    .then((response) => {
+      if (response.status) {
+        console.error(response.message);
+        return;
+      }
+
+      if (cart) {
+         cart.renderContents(response);
+      } else {
+         window.location = window.routes.cart_url;
+      }
+    })
+    .catch((e) => {
+      console.error(e);
+    })
+    .finally(() => {
+      button.classList.remove('loading');
+      if (spinner) spinner.classList.add('hidden');
+    });
+};
+
