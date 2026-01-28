@@ -126,3 +126,32 @@
 .thumbnail-list__item.is-active img {
     border-color: #e6b550;
 }
+/* Reduce side padding for About Us page */
+.page-width {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media screen and (min-width: 750px) {
+  .page-width {
+    padding-left: 3rem; 
+    padding-right: 3rem;
+    max-width: 1400px; /* Optional: Increase max-width if it feels too narrow */
+  }
+}
+
+
+/* Reduce side spacing for About Us page contents */
+.page-width {
+    max-width: 1600px; /* Make the container wider to reduce side 'Empty' space */
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .page-width {
+    padding-left: 2rem; 
+    padding-right: 2rem;
+  }
+}
+
