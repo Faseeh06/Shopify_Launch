@@ -92,11 +92,13 @@
     </h2>
 
     <div class="customproductgrid" id="template--{{ section.id }}__{{ section.id }}">
+      {%- assign collection = collections[section.settings.featured_collection] -%}
+
       {%- liquid
-        assign product1 = all_products[section.settings.featured_product_1]
-        assign product2 = all_products[section.settings.featured_product_2]
-        assign product3 = all_products[section.settings.featured_product_3]
-        assign product4 = all_products[section.settings.featured_product_4]
+        assign product1 = all_products[section.settings.featured_product_1] | default: collection.products[0]
+        assign product2 = all_products[section.settings.featured_product_2] | default: collection.products[1]
+        assign product3 = all_products[section.settings.featured_product_3] | default: collection.products[2]
+        assign product4 = all_products[section.settings.featured_product_4] | default: collection.products[3]
       -%}
 
       {%- if product1 and product1 != empty -%}
@@ -166,6 +168,26 @@
       "type": "product",
       "id": "featured_product_4",
       "label": "Featured Product 4"
+    },
+    {
+      "type": "product",
+      "id": "featured_product_5",
+      "label": "Featured Product 5"
+    },
+    {
+      "type": "product",
+      "id": "featured_product_6",
+      "label": "Featured Product 6"
+    },
+    {
+      "type": "product",
+      "id": "featured_product_7",
+      "label": "Featured Product 7"
+    },
+    {
+      "type": "product",
+      "id": "featured_product_8",
+      "label": "Featured Product 8"
     },
     {
       "type": "range",
