@@ -403,3 +403,26 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
     margin-left: 0;
   }
 }
+
+/* Antigravity Fixes for Cart Drawer Visibility */
+.drawer {
+  z-index: 999999 !important;
+}
+
+.drawer.active {
+  visibility: visible !important;
+}
+
+.drawer__inner {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+}
+
+.cart-item__name {
+  color: rgb(var(--color-foreground));
+}
+
+.cart-item__price-wrapper, .price {
+  color: rgb(var(--color-foreground));
+}
+

@@ -1571,3 +1571,20 @@ a.product__text {
   } */
 }
 
+
+/* Remove outline from add to cart button to match product card */
+.product-form__submit::after {
+  box-shadow: none !important;
+}
+
+
+/* Make add to cart button rounded like buy it now button */
+.product-form__submit {
+  border-radius: 50px !important;
+}
+
+.product-form__submit::before,
+.product-form__submit::after {
+  border-radius: 50px !important;
+}
+
