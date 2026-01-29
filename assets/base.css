@@ -3571,3 +3571,14 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+/* Custom Page Width Override for reduced padding on all pages */
+.collection-page-width-override {
+  padding: 0 0.75rem;
+}
+
+@media screen and (min-width: 750px) {
+  .collection-page-width-override {
+    padding: 0 2.5rem;
+  }
+}
